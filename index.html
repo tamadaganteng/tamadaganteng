@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pendataan</title>
+	  	<meta charset="utf-8">
+	  	<link rel="icon" href="data:image/jpeg;base64,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">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	  	<style type="text/css">
+/** Regular */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 400;
+  src: url("https://sf.abarba.me/SF-UI-Display-Regular.otf");
+}
+/** Semibold */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 600;
+  src: url("https://sf.abarba.me/SF-UI-Display-Semibold.otf");
+}
+
+/** Thin */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 300;
+  src: url("https://sf.abarba.me/SF-UI-Display-Thin.otf");
+}
+/** Bold */
+@font-face {
+  font-family: "SF Display";
+  font-weight: 700;
+  src: url("https://sf.abarba.me/SF-UI-Display-Bold.otf");
+}
+	  	*{
+	  		font-family: SF Display;
+	  		cursor: default;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			-o-user-select: none;
+			user-select: none;
+	  	}
+	  	body{
+	  		overflow: hidden;
+	  		background-image: url();
+	  		background-size: 100%;
+	  		margin: 0;
+	  		padding: 0;
+	  	}
+	  	img{
+			width: 100vw;
+			height: 100vh;
+			object-fit: cover;
+			position: absolute;
+		}
+		.preload{
+			position: absolute;
+			height: 100vh;
+			line-height: 100vh;
+			width: 100vw;
+			background: #000000E0;
+			backdrop-filter: blur(10px);
+			font-weight: lighter;
+			font-size: 20pt;
+			z-index: 100;
+			text-align: center;
+			color: #FFFFFF;
+			opacity: 1;
+			transition: all ease 1s;
+			font-family: monospace;
+		}
+		.container{
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+		}
+		.myoverlay{
+			backdrop-filter: blur(7px);
+		}
+	  	.mywindow{
+	  		background: #ECECEC;
+	  		position: absolute;
+	  		left: calc(50% - 250px);
+	  		top: calc(50% - 120px);
+	  		font-size: 12pt;
+	  		border-radius: 10px;
+	  		border: 1px solid #C6C6C6;
+	  		box-shadow: 0px 0px 10px #00000020;
+	  		
+	  	}
+	  	.myanimated{
+	  		transition: all ease 0.3s;
+	  	}
+	  	.mycontrol{
+	  		position: absolute;
+	  		display: inline-block;	
+	  		height: 30px;
+	  		left: 10px;
+	  		padding: 0px 5px;
+	  	}
+	  	.myheader{
+	  		color: #767676;
+	  		text-align: center;
+	  		font-weight: bold;
+	  		display: inline-block;
+	  		width: 100%;
+	  		height: 30px;
+	  		line-height: 30px;
+	  		border-radius: 10px 10px 0 0;
+	  		background: rgb(209,209,209);
+			background: linear-gradient(0deg, rgba(209,209,209,1) 0%, rgba(229,229,232,1) 100%);
+			border-bottom: 1px solid #C6C6C6;
+
+	  	}
+	  	.myclose, .mymini, .mymax{
+	  		display: inline-block;
+	  		width: 12px;
+	  		height: 12px;
+	  		margin-top: 8px;
+	  		border-radius: 10px;
+	  		margin-right: 2px;
+	  	}
+	  	.myclose{
+	  		background: #FE5D56;
+	  		border: 1px solid #EA3E4A;
+	  	}
+	  	.myclose:hover{
+	  		background: #EA3E4A;
+	  	}
+	  	.mymini{
+	  		background: #F6BD28;
+	  		border: 1px solid #F8AE1C;
+	  	}
+	  	.mymini:hover{
+	  		background: #F8AE1C;
+	  	}
+	  	.mymax{
+	  		background: #26CD3C;
+	  		border: 1px solid #4BBA54;
+	  	}
+	  	.mymax:hover{
+	  		background: #4BBA54;
+	  	}
+	  	.mybody{
+	  		padding: 30px;
+	  		padding-bottom: 100px;
+	  	}
+	  	.mytitle{
+	  		font-weight: bold;
+	  		font-size: 14pt;
+	  		margin-bottom: 10px;
+	  	}
+	  	.mycontent{
+
+	  	}
+	  	.mytext{
+	  		width: 350px;
+			border-radius: 7px;
+			padding: 5px;
+			margin-left: 10px;
+			box-sizing: border-box;
+			border: 3px solid #dcdcdca0;
+			-webkit-transition: 0.3s;
+			transition: 0.3s;
+			outline: none;
+	  	}
+	  	.mytext:focus{
+	  		border: 3px solid rgba(10,107,254,0.5);
+	  		/*transform: translateY(-2px);*/
+	  	}
+	  	.mytext:hover{
+	  		cursor: text;
+	  	}
+	  	.mybutton{
+	  		position: absolute;
+	  		height: 30px;
+	  		line-height: 30px;
+	  		bottom: 20px;
+	  		right: 20px;
+	  	}
+	  	.mybuttonyes, .mybuttonno{
+	  		display: inline-block;
+	  		width: 80px;
+	  		background: cyan;
+	  		height: 30px;
+	  		line-height: 30px;
+	  		margin-top: 0px;
+	  		text-align: center;
+	  		border-radius: 5px;
+	  		margin-left: 10px; 
+	  		font-weight:  600;
+	  	}
+	  	.mybuttonyes{
+	  		background: rgb(10,107,254);
+			background: linear-gradient(0deg, rgba(10,107,254,1) 0%, rgba(106,163,252,1) 100%);
+			color: #FFFFFF;
+	  		border: 1px solid #015FFC;
+	  	}
+	  	.mybuttonyes:hover{
+	  		background: rgb(10,107,254);
+	  	}
+	  	.mybuttonno{
+	  		background: #FFFFFF;
+	  		border: 1px solid #C6C6C6;
+	  	}
+	  	.mybuttonno:hover{
+	  		background: #EDEDED;
+	  	}
+	  	.myresize{
+	  		width: 15px;
+			height: 15px;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			cursor: se-resize;
+	  	}
+	  	.vidcont{
+	  		width: 100vw;
+	  		height: 100vh;
+	  		position: absolute;
+	  		display: none;
+	  		background: #000000A0;
+	  		z-index: 2;
+	  	}
+	  	.myhide{
+	  		display: none;
+	  	}
+	  	.vidcont:hover{
+	  		cursor: none;
+	  	}
+	  	video:hover{
+	  		cursor: none;
+	  	}
+	  	video{
+			position: relative;
+			left: 0;
+			top: 0;
+			opacity: 1;
+	  	}
+	  	.divvideo{
+			width: 688px;
+			height: 576px;
+			border-radius: 20px;
+			overflow: hidden;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			z-index: 10;
+	  	}
+	  	.myclock{
+	  		display: none;
+	  		position: absolute;
+	  		z-index: 2;
+	  		color: #FFFFFF;
+	  		text-align: center;
+	  		width: calc(100vw - 50px);
+	  		padding: 25px;
+	  	}
+	  	.contjam{
+	  		position: absolute;
+	  		width: 100%;
+	  		top: 50vh;
+	  		left: 0;
+	  		transform: translateY(-50%);
+	  		text-align: center;
+	  		margin: 0;
+	  		padding: 0;
+	  	}
+	  	.jam{
+	  		position: relative;
+	  		font-size: 100px;
+	  		font-weight: 300;
+	  	}
+	  	.tanggal{
+	  		position: relative;
+	  		font-size: 20px;
+	  		margin-top: 15px;
+	  	}
+	  	.ucapan{
+	  		position: relative;
+	  		color: #000000;
+	  		font-size: 20px;
+	  		margin-top: 50px;
+	  		background: #EAEAEA90;
+	  		left: calc(50% - 220px - 20px);
+	  		width: 440px;
+	  		padding: 30px 20px;
+	  		border-radius: 25px;
+	  		transition: all ease 0.3s;
+	  	}
+	  	.ucapan:active{
+	  		transform: scale(1.02);
+	  	}
+	  	.ucapan:hover, .ucapan *:hover{
+	  		cursor: pointer;
+	  	}
+	  	.ucapan::before{
+	  		content: 'ketuk untuk mencari';
+	  		font-size: 12pt;
+	  		width: 200px;
+	  		height: 50px;
+	  		line-height: 50px;
+	  		left: 50%;
+	  		bottom: -80px;
+	  		background: #FFFFFFB0;
+	  		position: absolute;
+	  		z-index: 99;
+	  		border-radius: 10px;
+	  		transform: translateX(-50%);
+	  		opacity: 0;
+	  		transition: all ease 0.3s;
+	  		pointer-events: none;
+	  	}
+	  	.ucapan:hover::before{
+	  		bottom: -60px;
+	  		opacity: 1;
+	  	}
+	  	.myakun{
+	  		color: #FFFFFF;
+	  		background: #00000080;
+	  		transform: translateY(0px);
+	  		width: 200px;
+	  		height: 30px;
+	  		line-height: 30px;
+	  		border-radius: 5px;
+	  		display: inline-block;
+	  		margin: 3px 2px;
+	  		transition: background ease 0.3s;
+	  		backdrop-filter: blur(10px);
+	  	}
+	  	.myakun:hover{
+	  		background: #000000E0;
+	  		cursor: pointer;
+	  	}
+	  	#nama *{
+	  		transition: all ease 0.3s;
+	  	}
+	  	#nama:hover{
+	  		cursor: default;
+	  	}
+	  	#nama::before{
+	  		content: 'ketuk untuk mengubah';
+	  		width: 200px;
+	  		height: 50px;
+	  		line-height: 50px;
+	  		left: 0;
+	  		top: 45px;
+	  		background: #00000090;
+	  		position: absolute;
+	  		z-index: 99;
+	  		border-radius: 10px;
+	  		transition: all ease 0.3s;
+	  		opacity: 0;
+	  		pointer-events: none;
+	  	}
+	  	#nama:hover::before{
+	  		top: 35px;
+	  		opacity: 1;
+	  	}
+	  	#nama *:hover, #textcari:hover{
+	  		cursor: text;
+	  		color: #FFFFFFA0;
+	  	}
+	  	#oke:hover{
+	  		background: #FFFFFF30;
+	  		cursor: pointer;
+	  	}
+	  	.tombolcari:hover{
+	  		background: rgb(10,107,254);
+	  		color: #FFFFFF;
+	  	}
+	  	.shortcut{
+	  		position: fixed;
+	  		bottom: 0;
+	  		width: 100px;
+	  		height: 70px;
+	  		line-height: 70px;
+	  		background: #FFFFFF10;
+	  		margin: 10px;
+	  		border-radius: 20px;
+	  		cursor: pointer;
+	  		transition: transform ease 0.3s;
+	  		backdrop-filter: blur(3px);
+	  	}
+	  	.shortcut:hover{
+	  		transform: scale(1.1);
+	  		backdrop-filter: blur(5px);
+	  	}
+	  	.shortcut:active{
+	  		transform: scale(0.9);
+	  		backdrop-filter: blur(5px);
+	  	}
+	  	.kiri{
+	  		left: 0;
+	  	}
+	  	.kanan{
+	  		right: 0;
+	  	}
+	  </style>
+	</head>
+	<body onload="init()">
+		<audio id="myAudio">
+			<source src="music.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		<audio id="myOpening">
+			<source src="opening.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		<div class="preload">PLEASE WAIT</div>
+		<div class="vidcont myoverlay">
+			<div class="divvideo">
+				<video id="myVideo" width="100%" height="100%">
+				  <source src="video.mp4" type="video/mp4">
+				  Your browser doe`s not support HTML5 video.
+				</video>
+			</div>
+		</div>
+		<img src="wp2.png">
+		<div class="container">
+			<div class="myclock">
+				<div class="myakun" id="nama">
+					<span id="spannama3" onclick="gantinama()"></span>
+				</div>
+				<div class="myakun" onclick="kembali()">Kembali</div>
+				<div class="myakun" onclick="reverse()">Reset</div>
+				<div class="contjam">
+					<div class="jam">-:-</div>
+					<div class="tanggal">-</div>
+					<div class="ucapan myoverlay" onclick="carigoogle()"><span id="spannama2"></span></div>	
+				</div>
+				<div class="shortcut kanan" onclick="toggleFullscreen()">fullscreen</div>
+				<div class="shortcut kiri" onclick="wpblur()">blur</div>
+			</div>
+			<div class="mywindow" id="myform" style="width: 500px; height: 240px">
+				<div class="myheader">
+					Registrasi
+				</div>
+				<div class="mybody">
+					<div class="mytitle">
+						Isi identitas anda terlebih dahulu
+					</div>
+					<div class="mycontent">
+						Tekan tombol merah untuk reset nama.<br><br>
+						Nama :
+						<input class="mytext" type="text" id="mynama" name="nama">
+					</div>
+					<div class="mybutton">
+						<div class="mybuttonyes" onclick="mywrite()">oke</div>
+					</div>
+				</div>	
+			</div>
+			<div class="mywindow myanimated myhide" id="mywindow" style="width: 500px; height: 240px">
+				<div class="mycontrol">
+					<div class="myclose" onclick="reverse()"></div>
+					<div class="mymini"></div>
+					<div class="mymax"></div>
+				</div>
+				<div class="myheader" id="mywindowheader">
+					halo <span id="spannama"></span>
+				</div>
+				<div class="mybody">
+					<div class="mytitle">
+						Gua suka sama lu
+					</div>
+					<div class="mycontent">
+					Kenapa? kaget ya? iya lah gua juga kaget, tapi tenang bree, gua udah moveon kok dari beliau hehehe, lu belom punya pacar kan? gua punya ide nih, gimana kalo kita pacaraan?
+					</div>
+					<div class="mybutton">
+						<div class="mybuttonno" onmouseover="move()" onclick="move2()" >tidak</div>
+						<div class="mybuttonyes" onclick="playVid()">iya</div>
+					</div>
+				</div>
+				<div class="myresize"></div>
+			</div>
+		</div>
+		<span style="position: absolute; text-align: center; line-height: 100vh; width: 100vw; z-index:-10;">jangan dijual bos</span>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  	<script type="text/javascript">
+	  		/*
+
+			referensi
+
+	  		https://www.w3schools.com/howto/howto_js_draggable.asp
+	  		https://stackoverflow.com/questions/2310734/how-to-make-html-text-unselectable
+	  		http://stackoverflow.com/questions/8960193/how-to-make-html-element-resizable-using-pure-javascript/33523184
+
+	  		*/
+	  		namaku=localStorage.getItem("nama");
+			blur="true"; 
+			$(window).on('load',function(){
+				$('.preload').css('background','#00000000').css('color','#FFFFFF00').css('backdrop-filter','blur(0px)').text('SELESAI').css('z-index','-2');
+			});
+	  		function init(){
+	  			startTime();
+	  			stopOpening();
+	  			add='<div class="cc">copyright Andika Sujanadi @2020</div>';
+	  			$('body').append(add);
+	  			if(localStorage.getItem("nama") != null && localStorage.getItem("checked") == "yoi"){
+		  			namaku=localStorage.getItem("nama");
+		  			myclock();
+		  		}else if(localStorage.getItem("nama") != null){
+		  			mystart();
+		  		}
+		  		if(localStorage.getItem("blur")=="true"){
+		  			wpblur();
+		  		}
+
+	  		}
+	  		$('img').on('dragstart', function(event) { event.preventDefault(); });
+	  		dragElement(document.getElementById("mywindow"));
+			function dragElement(elmnt) {
+			  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+			  if (document.getElementById(elmnt.id + "header")) {
+			    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+			  } else {
+			    elmnt.onmousedown = dragMouseDown;
+			  }
+
+			  function dragMouseDown(e) {
+			    animasi();
+			    e = e || window.event;
+			    e.preventDefault();
+			    pos3 = e.clientX;
+			    pos4 = e.clientY;
+			    document.onmouseup = closeDragElement;
+			    document.onmousemove = elementDrag;
+			  }
+
+			  function elementDrag(e) {
+			    e = e || window.event;
+			    e.preventDefault();
+			    pos1 = pos3 - e.clientX;
+			    pos2 = pos4 - e.clientY;
+			    pos3 = e.clientX;
+			    pos4 = e.clientY;
+			    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+			    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+			  }
+
+			  function closeDragElement() {
+			    document.onmouseup = null;
+			    document.onmousemove = null;
+			    animasi();
+			  }
+			}
+
+			var mywindow = document.querySelector('#mywindow');
+			var myresize = document.querySelector('.myresize');
+			myresize.addEventListener('mousedown', initDrag, false);
+			var startX, startY, startWidth, startHeight;
+			function initDrag(e) {
+			   startX = e.clientX;
+			   startY = e.clientY;
+			   startWidth = parseInt(document.defaultView.getComputedStyle(mywindow).width, 10);
+			   startHeight = parseInt(document.defaultView.getComputedStyle(mywindow).height, 10);
+			   document.documentElement.addEventListener('mousemove', doDrag, false);
+			   document.documentElement.addEventListener('mouseup', stopDrag, false);
+			}
+
+			function doDrag(e) {
+			   mywindow.style.width = (startWidth + e.clientX - startX) + 'px';
+			   mywindow.style.height = (startHeight + e.clientY - startY) + 'px';
+			    animasi();
+			}
+
+			function stopDrag(e) {
+			    document.documentElement.removeEventListener('mousemove', doDrag, false);
+			    document.documentElement.removeEventListener('mouseup', stopDrag, false);
+			    animasi();
+			}
+			var elem = document.documentElement;
+			function openFullscreen() {
+			  if (elem.requestFullscreen) {
+			    elem.requestFullscreen();
+			  } else if (elem.mozRequestFullScreen) { /* Firefox */
+			    elem.mozRequestFullScreen();
+			  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+			    elem.webkitRequestFullscreen();
+			  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+			    elem.msRequestFullscreen();
+			  }
+			}
+			function move(){
+				kali=20;
+				addanimation();
+				random1=(mywindow.offsetTop+(Math.floor(Math.random() * 10)-5)*kali);
+				random2=(mywindow.offsetLeft+(Math.floor(Math.random() * 10)-5)*kali);
+				if(random1>0 && random1<33)random1=33+20;
+				if(random1<0 && random1>-33)random1=-33-20;
+				if(random2>0 && random2<83)random2=83+20;
+				if(random2<0 && random2>-83)random2=-83-20;
+				if(random1==0 && random2==0)random1=-100;
+				mywindow.style.top  = random1 + 'px';
+				mywindow.style.left = random2 + 'px';
+				if(random1<0 || ((random1+mywindow.clientHeight)>window.innerHeight)){
+					mywindow.style.top = "calc(50% - "+mywindow.clientHeight/2+"px)";
+				}
+				if(random2<0  || ((random2+mywindow.clientWidth)>window.innerWidth)){
+					mywindow.style.left = "calc(50% - "+mywindow.clientWidth/2+"px)";
+				}
+			}
+			function move2(){
+				kali=50;
+				addanimation();
+				random1=(mywindow.offsetTop+(Math.floor(Math.random() * 10)-5)*kali);
+				random2=(mywindow.offsetLeft+(Math.floor(Math.random() * 10)-5)*kali);
+				if(random1>0 && random1<33)random1=33+20;
+				if(random1<0 && random1>-33)random1=-33-20;
+				if(random2>0 && random2<83)random2=83+20;
+				if(random2<0 && random2>-83)random2=-83-20;
+				if(random1==0 && random2==0)random1=-100;
+				mywindow.style.top  = random1 + 'px';
+				mywindow.style.left = random2 + 'px';
+				if(random1<0 || ((random1+mywindow.clientHeight)>window.innerHeight)){
+					mywindow.style.top = "calc(50% - "+mywindow.clientHeight/2+"px)";
+				}
+				if(random2<0  || ((random2+mywindow.clientWidth)>window.innerWidth)){
+					mywindow.style.left = "calc(50% - "+mywindow.clientWidth/2+"px)";
+				}
+			}
+			function addanimation(){
+			   var element = document.getElementById("mywindow");
+			   element.classList.add("myanimated");
+			}
+			function animasi() {
+			   var element = document.getElementById("mywindow");
+			   element.classList.toggle("myanimated");
+			}
+			var vid = document.getElementById("myVideo"); 
+			function playVid() { 
+				stopOpening();
+				openFullscreen();
+				$('#myVideo').show();
+				$('.vidcont').fadeIn();
+				localStorage.setItem("checked", "yoi");
+				$('#mywindow').fadeOut(300);
+			  	vid.play(); 
+			} 
+			vid.onended = function() {
+				playAudio();
+			    $('.vidcont').fadeOut();
+			    myclock();
+			}
+			function capital_letter(str) 
+			{
+				if (!str){
+					str='noname';
+				}
+			    str = str.split(" ");
+			    for (var i = 0, x = str.length; i < x; i++) {
+			        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+			    }
+			    return str.join(" ").substr(0, 20);
+			}
+			function mywrite(){
+				openFullscreen();
+				playOpening();
+				nama = $('#mynama').val();
+				$('#mynama').val('');
+				nama = capital_letter(nama);
+				localStorage.setItem("nama", nama);
+				namaku=localStorage.getItem("nama");
+				mystart();
+			}
+			function mystart(){
+				$('#spannama').text(localStorage.getItem("nama"));
+				$('#myform').hide();
+				$('#mywindow').show();
+				resetposisi();
+			}
+			function reverse(){
+				stopOpening();
+				$('#myform').fadeIn();
+				$('#mywindow').hide();
+				$('.myclock').hide();
+				if(blur=="false"){
+					wpblur();
+				}
+				localStorage.clear();
+			}
+			function kembali(){
+				stopOpening();
+				localStorage.removeItem("checked");
+				if(blur=="false"){
+					wpblur();
+				}
+				$('#myform').hide();
+				$('#mywindow').fadeIn();
+				$('.myclock').hide();
+			}
+			function gantinama(){
+				nama=$('#spannama3').text();
+				$("#nama *").remove();
+				$("#nama").append("<input type='text' id='textnama' value='"+nama+"' style='background:#00000000; color:#FFF; outline: none; box-sizing:border-box; border: 0px solid #000;' placeholder='nama' autofocus></input><span id='oke' style='transition: all ease 0.3s; border-radius:5px; width:30px; height:25px; margin-top:2.5px; line-height:25px; position:absolute; right:3px;' onclick='gantinamaok()'>oke</span>");
+				textnama=document.querySelector('#textnama');
+				textnama.autofocus = true;
+				textnama.setSelectionRange(0, textnama.value.length);
+				textnama.addEventListener('keypress', function (e) {
+				    if (e.key === 'Enter') {
+				      gantinamaok();
+				    }
+				});
+			}
+			function gantinamaok(){
+				textnama=document.querySelector('#textnama');
+				textnama.autofocus = false;
+				nama=$('#textnama').val();
+				nama = capital_letter(nama);
+				localStorage.setItem("nama", nama);
+				$("#nama *").remove();
+				$("#nama").append('<span id="spannama3" onclick="gantinama()">'+localStorage.getItem("nama")+'</span>')
+			}
+			cari=true;
+			selesai=false;
+			function carigoogle(){
+				if (cari){
+					cari=false;
+					selesai=false;
+					$('.ucapan').text('');
+					$('.ucapan *').remove();
+					$(".ucapan").append("<input type='text' id='textcari' style='background:#00000000; width:300px; transform:translateX(-70px); color:#000; outline: none; box-sizing:border-box; border: 0px solid #000; font-size:20px' placeholder='cari di sini' autofocus></input><span class='tombolcari'; style='transition: all ease 0.3s; border-radius:10px; width:60px; height:50px; top:calc(50% - 25px); right:90px; line-height:50px; position:absolute;' onclick='cariok()'>cari</span><span class='tombolcari'; style='transition: all ease 0.3s; border-radius:10px; width:60px; height:50px; top:calc(50% - 25px); right:20px; line-height:50px; position:absolute;' onclick='caribatal()'>batal</span>");
+					document.querySelector('#textcari').addEventListener('keyup', function (e) {
+					    if (e.key === 'Enter') {
+				      		cariok();
+					    }
+					    if(e.key === "Escape") {
+					    	caribatal();
+					    }
+					});
+					document.querySelector('body').addEventListener('keyup', function (e) {
+					    if(e.key === "Escape") {
+					    	caribatal();
+					    }
+					});
+				}
+				if(selesai){
+					cari=true;
+				}
+			}
+			function cariok(){
+				window.open("https://www.google.com/search?q="+$('#textcari').val());
+				caribatal();
+			}
+			function caribatal(){
+				$('.ucapan *').remove();
+				$(".ucapan").append('<span id="spannama2"></span>');
+				var today = new Date();
+				var h = today.getHours();
+				if(h>23)tulis('malam','seharusnya kamu sudah tidur');
+				else if(h>19)tulis('malam','waktunya mengisi energi');
+				else if(h>18)tulis('petang','selamat menikmati senja');
+				else if(h>14)tulis('sore','selamat menjalani hari');
+				else if(h>13)tulis('siang','tetap semangat')
+				else if(h>9)tulis('siang','selamat bekerja')
+				else if(h>4)tulis('pagi','selamat beraktivitas');
+				else tulis('malam','seharusnya kamu sudah tidur');
+				selesai=true;
+			}
+			function resetposisi(){
+				mywindow.style.top = "calc(50% - "+mywindow.clientHeight/2+"px)";
+				mywindow.style.left = "calc(50% - "+mywindow.clientWidth/2+"px)";
+			}
+			document.querySelector('#mynama').addEventListener('keypress', function (e) {
+			    if (e.key === 'Enter') {
+			      mywrite();
+			    }
+			});
+			function myclock(){
+				$('#spannama3').text(localStorage.getItem("nama"));
+				localStorage.setItem("checked", "yoi");
+				$('#myform').hide();
+				$('#mywindow').hide();
+				$('#myVideo').hide();
+				$('.myclock').show();
+			}
+			jalan=false;
+			function startTime(){
+				var today = new Date();
+				var h = today.getHours();
+				var m = today.getMinutes();
+				var s = today.getSeconds();
+				h = checkTime(h);
+				m = checkTime(m);
+				s = checkTime(s);
+				document.querySelector('.jam').innerHTML =	h + ":" + m;
+				var t = setTimeout(startTime, 500);
+				mytanggal();
+				if(cari){
+					if(h>23)tulis('malam','seharusnya kamu sudah tidur');
+					else if(h>18)tulis('malam','waktunya mengisi energi');
+					else if(h>17)tulis('petang','selamat menikmati senja');
+					else if(h>14)tulis('sore','selamat menjalani hari');
+					else if(h>13)tulis('siang','tetap semangat')
+					else if(h>9)tulis('siang','selamat bekerja')
+					else if(h>4)tulis('pagi','selamat beraktivitas');
+					else tulis('malam','seharusnya kamu sudah tidur');
+					if(h>18)     document.querySelector('img').src="wp1.png";
+					else if(h>4) document.querySelector('img').src="wp2.png";
+					else         document.querySelector('img').src="wp1.png";
+				}
+				if(window.btoa($('.cc').text())!='Y29weXJpZ2h0IEFuZGlrYSBTdWphbmFkaSBAMjAyMA=='){
+					if(jalan) $('.container').remove();
+					if(jalan) $('img').remove();
+					jalan=true;
+				}
+			}
+			function tulis(waktu,ucapan){
+				$("#spannama2").text('Selamat '+waktu+' '+localStorage.getItem("nama")+', '+ucapan+'.');
+			}
+			function checkTime(i) {
+				if (i < 10) {i = "0" + i};
+				return i;
+			}
+			var elem = document.documentElement;
+			fs=false;
+			function openFullscreen() {
+				fs=true;
+				if (elem.requestFullscreen) {
+					elem.requestFullscreen();
+				} else if (elem.mozRequestFullScreen) { /* Firefox */
+					elem.mozRequestFullScreen();
+				} else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+					elem.webkitRequestFullscreen();
+				} else if (elem.msRequestFullscreen) { /* IE/Edge */
+					elem.msRequestFullscreen();
+				}
+			}
+			function toggleFullscreen() {
+				if( window.innerHeight == screen.height){
+				    fs=true;
+				}
+				else{
+					fs=false;
+				}
+				if(fs){
+					fs=false;
+					if (document.exitFullscreen) {
+						document.exitFullscreen();
+					} else if (document.mozCancelFullScreen) {
+						document.mozCancelFullScreen();
+					} else if (document.webkitExitFullscreen) {
+						document.webkitExitFullscreen();
+					} else if (document.msExitFullscreen) {
+						document.msExitFullscreen();
+					}
+				}
+				else{
+					openFullscreen();
+				}
+			  
+			}
+			function mytanggal(){
+				var hari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+				var bulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'Nopember', 'Desember'];
+				var d = new Date();
+				var dayName = hari[d.getDay()];
+				var monthName = bulan[d.getMonth()];
+				tanggal=(dayName+', '+d.getDate()+' '+monthName);
+				$('.tanggal').text(tanggal);
+			}
+			function wpblur(){
+				$('.container').toggleClass("myoverlay");
+				localStorage.setItem("blur", blur);
+				if(blur=="true"){
+					blur="false";
+				}
+				else{
+					blur="true";
+				}
+			}
+			function playAudio() { 
+				var x = document.getElementById("myAudio"); 
+				x.volume = 0.15;
+				x.play(); 
+			}
+			function playOpening() { 
+				var x = document.getElementById("myOpening"); 
+				x.volume = 0.3;
+				x.play(); 
+				x.addEventListener("ended",function() {
+					stopOpening();
+				});
+			}
+			function stopOpening(){
+				var x = document.getElementById("myOpening"); 
+				x.pause();
+				x.currentTime = 0;
+				var x = document.getElementById("myAudio"); 
+				x.pause();
+				x.currentTime = 0;
+			}
+	  	</script>
+	</body>
+</html>
